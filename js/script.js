@@ -14,6 +14,10 @@ const section = document.querySelector(sectionId);
        // scrollIntoView()메서드는 부드러운 스크롤 효과를 적용하도록 지정합니다.
        section.scrollIntoView({behavior:"smooth"})
    }
- }
+ 
+}
+// top 버튼 스크롤 기능
+
+
  }
  
