@@ -208,6 +208,10 @@ body {
   height: 5px;
   background-color: rgb(237, 28, 36);
 }
+.visual-txt{
+  color: #f8f8f8;
+  font-size: 20px;
+}
 .visual-bt {
   display: block;
 
@@ -250,7 +254,6 @@ body {
   text-align: center;
   color: #111;
   padding-bottom: 31px;
-  background-color: aqua;
 }
 .business-title::after{
   content: "";
@@ -544,7 +547,6 @@ margin-left: 1px;
   position: relative;
   /* display: block; */
   display: inline-block;
-  background-color: blanchedalmond;
 }
 .about-list li{
   position: relative;
@@ -579,7 +581,6 @@ margin-left: 1px;
   /* margin: 0 200px; */
   width: 560px;
   
-  background-color: #ed1c24;
   
 }
 .about-list li:nth-child(3) a::before{
@@ -626,8 +627,70 @@ margin-left: 1px;
 /* top버튼 */
 .top-button{
   position: fixed ;
-  right: 0px;
-  bottom: 0px;
+  right: 30px;
+  bottom: 60px;
   z-index: 9999;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.top-button .chat-btn span{
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  width: 170px;
+  background-color: #f8f8f8;
+  border-radius: 23px;
+  padding: 8px 10px;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  display: none;
+}
+.top-button .chat-btn:hover span{
+  display: block;
+}
+.top-button .chat-btn{
+  animation: updown 1.5s infinite;
+}
+.top-button .shop-btn{
+  position: relative;
+  display: block;
+  width: 55px;
+  border-radius: 50px;
+  line-height: 55px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+
+}
+.top-button .top-btn {
+  background-color: #ed1c24;
+  width: 55px;
+  border-radius: 50%;
+  line-height: 55px;
+  text-align: center;
+}
+.top-button .top-btn img{
+  transform: rotate(180deg);
+}
+
+.top-button .top-btn img.up{
+  transform: rotate(0deg);
+}
+/* 애니메이션 효과 */
+@keyframes updown{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10%);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }

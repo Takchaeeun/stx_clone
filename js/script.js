@@ -17,7 +17,18 @@ const section = document.querySelector(sectionId);
  
 }
 // top 버튼 스크롤 기능
-
+const top8tn = document.getElementById("top-btn");
+top8tn.addEventListener("click" , function(even){
+   even.preventDefault();
+   console.log(window.scrollY)
+   if(window.scrollY == 0){
+      window.scrollTo({
+         top:1000,
+         behavior:"smooth"
+      })
+   }
+   else{}
+})
 
  }
  
